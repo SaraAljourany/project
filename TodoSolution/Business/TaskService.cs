@@ -35,10 +35,10 @@ namespace NTierTodoApp.Business
                 task.IsComplete = true;
         }
 
-      //TODO:تنفيذ دالة حذف مهمة
+
         public void DeleteTask(int id)
         {
-        //:TODO:DataAccess استدعاء دالة حذف في طبقة
+            repository.Delete(id);
        }
     }
 }
