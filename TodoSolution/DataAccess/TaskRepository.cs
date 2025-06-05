@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using MvcTodoApp.Models;
-using NTierTodoApp.Models;
+
 
 namespace NTierTodoApp.DataAccess
 {
@@ -24,20 +24,18 @@ namespace NTierTodoApp.DataAccess
 
         public TaskItem GetById(int id)
         {
+#pragma warning disable CS8603 // Possible null reference return.
             return tasks.FirstOrDefault(t => t.Id == id);
+#pragma warning restore CS8603 // Possible null reference return.
         }
 
 
         public void Delete(int id)
         {
             //TODO:idابحث عن المهمة باستخدام 
-           //TODO:اذا كانت المهمة موجودة احذفها من القائمة
+            //TODO:اذا كانت المهمة موجودة احذفها من القائمة
         }
 
-        public void Add(TaskItem newTask)
-        {
-            throw new NotImplementedException();
-        }
+
     }
-    
 }
